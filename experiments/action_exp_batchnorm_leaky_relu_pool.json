@@ -1,0 +1,13 @@
+{
+ "architecture": "Denoiser(\n  (en_conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (en_conv2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (en_conv3): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (relu): LeakyReLU(negative_slope=0.01)\n  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n  (en_2hid): Linear(in_features=8192, out_features=250, bias=True)\n  (bn4): BatchNorm1d(250, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (en_hid2mu): Linear(in_features=250, out_features=20, bias=True)\n  (en_hid_2sigma): Linear(in_features=250, out_features=20, bias=True)\n  (de_hid2out): Linear(in_features=20, out_features=250, bias=True)\n  (bn5): BatchNorm1d(250, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (de_out2hid): Linear(in_features=250, out_features=8192, bias=True)\n  (bn6): BatchNorm1d(8192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (de_conv1): ConvTranspose2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (bn7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (de_conv2): ConvTranspose2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (bn8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (de_conv3): ConvTranspose2d(128, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (bn9): BatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (unpool): UpsamplingNearest2d(scale_factor=2.0, mode='nearest')\n  (sigmoid): Sigmoid()\n)",
+ "experiment": "exp_batchnorm_leaky_relu_pool",
+ "hyperparameter": {
+  "epoch": 20,
+  "lr": 0.01,
+  "batch_size": 2,
+  "workers": 2,
+  "device": "cpu"
+ },
+ "loss": 5752.8935546875,
+ "epoch": 0
+}

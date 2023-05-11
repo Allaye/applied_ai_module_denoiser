@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+                                  Please do not touch this PC, i am on my way back.!!!, my Neural Network is  training!!!
+
+
+
+
+Convergance
+the model wasnt converging, so i made come changes to the architecture, like batchnorm and changed the activation function to LeakyRelu
+ c
